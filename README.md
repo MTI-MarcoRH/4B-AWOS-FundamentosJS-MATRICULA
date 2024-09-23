@@ -13,7 +13,7 @@ Previo a inciiar el desarrollo de software para web usando el framework de NodeJ
 |1.|Metodología de Evaluación|1| ✅Finalizada|
 |2.|Inicialización del Proyecto de Fundamentos de JS|8| ✅Finalizada|
 |3.|Ejercicio 01: Declaración de Variables|6| ✅Finalizada|
-|4.|Tipos de de Dato|10| ⭐ Activa|
+|4.|Ejercicio 02: Tipos de de Dato (Undefined, Boolean, Number, String, BigInt, Symbol, Null, Function)|10| ⭐ Activa|
 
 ### Autor
 Marco A. Ramírez Hernández
