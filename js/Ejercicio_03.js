@@ -278,6 +278,9 @@ const Venta = Object.assign(Producto3, Pedido);
 console.log("Consultamos este nuevo objeto VENTA ")
 console.table(Venta);
 
+//TOTAL FIRMAS DE TAREA: 13 = 11 
+//TOTAL FIRMS PRACTICAS: 25 = 20
+// AL 27 DE SEPTIEMBRE:
 
 
 
@@ -303,11 +306,7 @@ console.log(Venta2)
 console.table(Venta2)
 
 
-
-
 console.log("%c12.- Mutabilidad POST Unión de Objetos", style_console);
-
-
 
 // Vamos a verificar el estatus de mutabilidad de los obetos
 console.log("Vamos a verificar el estatus de mutabilidad del objeto PEDIDO")
