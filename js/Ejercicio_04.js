@@ -1,7 +1,5 @@
 // Repaso de Arreglos
 
-
-
 //Estilización de los mensajes de salida
 const bg = "linear-gradient(11deg, rgba(199,0,36,1) 0%, rgba(255,129,26,1) 33%, rgba(255,191,26,1) 86%)";
 const style_console = `background: ${bg}; color: white; border-radius: 6px; padding: 4px; font-size: 1.0rem; font-weight: bold`
@@ -197,14 +195,23 @@ console.table(estudiantes)
 console.log("%c10.- Métodos para la manipulación de Arreglos INMUTABLES ",  style_console);
 let signosZodiacales=["Aries","Tauro","Geminis","Cáncer","Leo","Virgo","Libra","Escorpio","Sagitario","Capricornio","Acuario","Piscis"]
 
+//congelamos el arreglo volviendolo INMUTABLE; 
+Object.freeze(signosZodiacales);
+
+
+//Ningu a se ejecuta por que nuestro arreglo es inmutable
+/*signosZodiacales.push("Ofiuco");
+signosZodiacales.unshift();
+signosZodiacales.splice(6,2);*/
+
+
 let [signo1,,signo3,,,,signo7,,,,,]=signosZodiacales;
 console.log(`El primer signo zodiacal es: ${signo1}`)
 console.log(`El primer signo zodiacal es: ${signo3}`)
+signo7="Naranja";
 console.log(`El primer signo zodiacal es: ${signo7}`)
 //console.log(`El primer signo zodiacal es: ${signo4}`)
 
-//congelamos el arreglo volviendolo INMUTABLE; 
-Object.freeze(signosZodiacales);
 
 
 
@@ -219,7 +226,6 @@ estudiantes.push("Jonathan Ramírez");
 estudiantes.push("Ailton Artiaga");
 estudiantes.push("Tania Ibarra");
 console.table(estudiantes);
-
 Object.freeze(estudiantes);
 
 //Filter es un método que recorre los elementos de un arreglo haciendo alguna tarea en específico, lo que tenemos que considerar es que este nuevo arreglo resultante es un objeto nuevo que puede ser mutable
@@ -227,13 +233,12 @@ Object.freeze(estudiantes);
 console.log("Filtrando los primeros 5 elementos");
 let nuevoEstudiantes = estudiantes.filter((estudiante,index) => index<5);
 console.table(nuevoEstudiantes);
-console.table(filtaPrimeros5(estudiantes));
+console.table(filtraPrimeros5(estudiantes));
 
 
 // filtrar a los estudiantes que su nombre tenga mas de 15 carácteres
 let nuevoEstudiantesNombre = estudiantes.filter((estudiante) => estudiante.length>15);
 console.table(nuevoEstudiantesNombre);
-
 
 
 //Intentamos modificar el arreglo inmutable
@@ -245,7 +250,7 @@ nuevoEstudiantes.unshift("Diego Tecorralco");
 console.table(nuevoEstudiantes);
 
 
-function filtaPrimeros5(arregloEstudiantes)
+function filtraPrimeros5(arregloEstudiantes)
 {
     let listaFiltrada =[]
     for(let i=0; i<5; i++)
